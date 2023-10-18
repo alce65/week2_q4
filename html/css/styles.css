@@ -1,0 +1,11 @@
+ul {
+  background-image: url('../assets/01.jpg');
+}
+
+.item-2 {
+  padding-inline-start: 20%;
+}
+
+.item-3 {
+  padding-inline-start: 40%;
+}
