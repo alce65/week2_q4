@@ -1,10 +1,6 @@
-export const strictEquals = (a, b) => {
-  if (Object.is(a, b)) {
-    if (Object.is(a, NaN)) {
-      return false;
-    }
-
-    return true;
+export const strictEqualsBasic = (a, b) => {
+  if (isNaN(a) || isNaN(b)) {
+    return false;
   }
 
   if (
@@ -14,5 +10,11 @@ export const strictEquals = (a, b) => {
     return true;
   }
 
-  return false;
+  return Object.is(a, b);
+};
+
+export const strictEquals = (a, b) => {
+  if (Object.is(a, NaN)) return false;
+  if (!a && !b) return true;
+  return Object.is(a, b);
 };
