@@ -7,14 +7,12 @@ export const strictEquals = (a, b) => {
     return true;
   }
 
-  if (Object.is(a, b)) {
-    if (
-      (Object.is(a, 0) && Object.is(b, -0)) ||
-      (Object.is(a, -0) && Object.is(b, 0))
-    ) {
-      return false;
-    }
-
+  if (
+    (Object.is(a, 0) && Object.is(b, -0)) ||
+    (Object.is(a, -0) && Object.is(b, 0))
+  ) {
     return true;
   }
+
+  return false;
 };
