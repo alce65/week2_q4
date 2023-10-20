@@ -26,7 +26,7 @@ describe('Given arrayLength', () => {
 describe('Given arrayPush', () => {
   test('should first', () => {
     const aData = [];
-    const result = arrayPush(2);
+    const result = arrayPush(aData, 2);
     expect(result).toBe(1);
     expect(aData).toStrictEqual([2]);
   });

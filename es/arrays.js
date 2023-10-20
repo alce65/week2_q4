@@ -9,4 +9,7 @@ export const arrayLength = (arr) => {
   return count;
 };
 
-export const arrayPush = () => {};
+export const arrayPush = (aData, value) => {
+  aData[arrayLength(aData)] = value;
+  return arrayLength(aData);
+};
