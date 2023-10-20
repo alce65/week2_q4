@@ -8,3 +8,5 @@ export const arrayLength = (arr) => {
 
   return count;
 };
+
+export const arrayPush = () => {};

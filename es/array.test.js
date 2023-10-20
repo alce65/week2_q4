@@ -1,4 +1,4 @@
-const { arrayLength } = require('./arrays');
+import { arrayLength, arrayPush } from './arrays';
 
 describe('Given arrayLength', () => {
   test('should first', () => {
@@ -20,5 +20,14 @@ describe('Given arrayLength', () => {
     const expected = 3;
     const result = arrayLength(testData);
     expect(result).toBe(expected);
+  });
+});
+
+describe('Given arrayPush', () => {
+  test('should first', () => {
+    const aData = [];
+    const result = arrayPush(2);
+    expect(result).toBe(1);
+    expect(aData).toStrictEqual([2]);
   });
 });
